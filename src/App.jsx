@@ -304,50 +304,13 @@ export default function Memo() {
         </section>
       )}
 
-      {active === "moodboard" && (
-        <section style={styles.section}>
-          <div style={styles.sectionLabel}>VI. Campaign Mood Board</div>
-          <div style={styles.h2}>Photoshoot Direction</div>
-          <P>The campaign imagery should feel like it was found, not made. No model-facing-camera shots. No white studio. The world of these objects is specific: a 19th-century German folk print meeting a Hudson Valley stone house. The light is morning or late afternoon. The color palette is earned, not styled.</P>
-          <H4>Color Palette — Shoot Direction</H4>
-          <div style={styles.paletteRow}>
-            {[["#c5b49a","Linen & Oatmeal"],["#8b4513","Rust & Terracotta"],["#2f4f2f","Forest Green"],["#1a1510","Ink Black"],["#e8dcc8","Raw Parchment"],["#b5a06e","Mustard & Ochre"],["#8b7355","Warm Walnut"]].map(([c, n]) => (
-              <div key={c} style={styles.swatch}>
-                <div style={{ ...styles.swatchColor, background: c }} />
-                <div style={styles.swatchName}>{n}</div>
-              </div>
-            ))}
-          </div>
-          <div style={styles.moodGrid}>
-            {[
-              ["#c5b49a","#e8dcc8","Still Life — Morning Table","Reference: Laura Letinsky tabletop photography. Uncleared breakfast table with the placemats and napkins. Morning light through the café curtains. Grain in the image. No styling that looks like styling."],
-              ["#8b4513","#c5b49a","The Curtains in a Stone Room","Reference: World of Interiors location shoots in Austrian and German farmhouses. The café curtains hung in the inn's tavern windows, stone wall behind, afternoon crosslight."],
-              ["#2f4f2f","#8b7355","Wild und Wald in the Field","Reference: Old hunting and field prints; sporting-life photography from Town & Country archives. A dog in the dog bed, or a dog bed in a field. The hunting print brought outside into the landscape it depicts."],
-              ["#8b4513","#1a1510","The Archival Moment","One to two shots that integrate the Wallach archive directly — a vintage print or photograph laid flat next to a current object. Past and present in the same frame."],
-              ["#e8dcc8","#b5a06e","The Pinafore in Motion","The pinafore dress worn by someone actually doing something — cooking, gardening, carrying something. No one standing still and looking at the camera."],
-              ["#c5b49a","#2f4f2f","The Herzerlmuster Close-Up","The heart-and-flower print at 1:1 scale, shot with a tilt-shift or medium-format lens. Close enough to see the texture of the fabric. The print as an object of beauty in itself."],
-            ].map(([c1, c2, title, desc]) => (
-              <div key={title} style={styles.moodItem}>
-                <div style={{ ...styles.moodSwatch, background: `linear-gradient(135deg, ${c1}, ${c2})` }} />
-                <div style={styles.moodTitle}>{title}</div>
-                <p style={styles.moodP}>{desc}</p>
-              </div>
-            ))}
-          </div>
-          <H4>Shoot Notes</H4>
-          <P><strong>Location:</strong> The Feathers tavern and inn rooms at The Six Bells, Rosendale. Possibly one exterior location creek-side for the Wild und Wald objects. Avoid generic Hudson Valley "magic hour" clichés.</P>
-          <P><strong>Photographer direction:</strong> Shoot on medium format if budget allows; film for archival comparison shots. No overly warm filters. The prints are already saturated; let the photography be a little cooler and quieter than you think it should be.</P>
-          <P><strong>Styling:</strong> Minimal. Objects do the work. No additional props that compete. One or two books, one simple vessel. The styling should feel like someone lives there, not like a shoot happened there.</P>
-        </section>
-      )}
-
       {active === "palette" && (
         <section style={styles.section}>
-          <div style={styles.sectionLabel}>VII. Color Palette</div>
+          <div style={styles.sectionLabel}>VI. Color Palette</div>
           <div style={styles.h2}>The Wallach Prints — Color System</div>
 
           {[
-            { label: "12er Muster", name: "Geometric dot-grid", colors: [["#EDE8DC","Ecru"],["#B8924A","Weathered ochre"],["#6B8F4E","Sage green"],["#2F5C30","Forest green"],["#9B3030","Barn red"],["#3D5A8A","Slate blue"],["#7B6B9E","Periwinkle"]] },
+            { label: "12er Muster", name: "Geometric dot-grid", colors: [["#EDE8DC","Ecru"],["#B8924A","Weathered ochre"],["#6B8F4E","Sage green"],["#2F5C30","Forest green"],["#9B3030","Barn red"],["#3D5A8A","Slate blue"]] },
             { label: "Herzerlmuster", name: "Hearts & florals", colors: [["#EDE8DC","Ecru"],["#C0392B","Folk red"],["#6B9EC4","Cornflower blue"]] },
             { label: "Wild und Wald", name: "Forest scenes", colors: [["#EDE8DC","Ecru"],["#3D4A7A","Indigo blue"],["#8B2635","Maroon"],["#1C3A1E","Deep hunter"]] },
           ].map(({ label, name, colors }) => (
